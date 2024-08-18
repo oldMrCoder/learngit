@@ -1,0 +1,4 @@
+今天测试 gh auth login ，在最后一个选项遇到上面的两种验证方式，存在以下问题：
+1、通过 browser 验证的方式，在过程中提供随机的验证码，要将之帖粘到自动打开的 https://github.com/login/device ，但问题是，因为在虚拟机里操作，不能自己打开。
+2、通过 Access token 验证的方式，在过程中，要求提供 Personal access token ，该令牌在 https://github.com/settings/tokens 获取。存在的问题是，每次都要重新生成，（现有的令牌只显示名字，看不到令牌码），而且要注意，对令牌的权限有最小要求，比如：The minimum required scopes are 'repo', 'read:org', 'workflow'。使用用令牌前需要更新最小权限，并重新生成令牌码。
+3、gh auth status 可查看用户在本终端的登录状态。
